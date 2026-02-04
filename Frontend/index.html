@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Paid Access</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="lock">
+
+<div class="box">
+  <h2>🔒 Paid Tool</h2>
+  <p>Enter Password</p>
+  <input type="password" id="pass" placeholder="Password">
+  <button onclick="unlock()">Unlock</button>
+  <span id="msg"></span>
+</div>
+
+<script>
+function unlock(){
+  if(document.getElementById("pass").value === "Yuvraj@123"){
+    localStorage.setItem("paid","true");
+    location.href="app.html";
+  }else{
+    document.getElementById("msg").innerText="❌ Wrong Password";
+  }
+}
+</script>
+
+</body>
+</html>
