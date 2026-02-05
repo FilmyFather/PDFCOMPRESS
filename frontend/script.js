@@ -10,7 +10,7 @@ async function compress(){
 
   document.getElementById("status").innerText="⏳ Compressing...";
 
-  const res = await fetch("https://YOUR-RENDER-URL/compress",{
+ fetch("https://pdfcompress-ozai.onrender.com/compress", {
     method:"POST",
     body:formData
   });
